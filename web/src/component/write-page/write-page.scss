@@ -1,0 +1,10 @@
+.write-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .write-wrapper {
+    width: 1100px;
+    min-width: 590px;
+  }
+}
