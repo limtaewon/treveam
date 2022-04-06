@@ -5,7 +5,7 @@ const Blog = new mongoose.Schema({
   author: { type: Schema.Types.ObjectId, ref: "User", required: true },
   title: { type: String, required: true },
   content: { type: String, required: true },
-  area: { type: Schema.Types.ObjectId, ref: "Sarea" },
+  area: { type: Schema.Types.ObjectId, ref: "Sarea", required: true },
   createdAt: { type: Date, default: Date.now, required: true },
   // 동적으로 변동될 수 있는 데이터
   viewCount: { type: Number, default: 0 },

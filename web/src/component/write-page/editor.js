@@ -1,3 +1,4 @@
+import Selectbox from "./selectbox";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import Editor from "ckeditor5-custom-build/build/ckeditor";
 import { useState } from "react";
@@ -10,11 +11,13 @@ export default function Ckeditor() {
   const [data, setData] = useState("");
   const [title, setTitle] = useState("");
 
+  const area = useSelector((state) => state.dropbox.sarea);
+
   function Submithandler() {
     const body = {
       title: title,
       content: data,
-      area: "6242c5aa21849c8da977c119",
+      area: area,
     };
     axios
       .post("http://localhost:8080/blog/create", body, {
@@ -28,6 +31,9 @@ export default function Ckeditor() {
   function Titlehandler(e) {
     setTitle(e.target.value);
   }
+  function Test(e) {
+    console.log(e);
+  }
 
   return (
     <div className="editorForm">
@@ -36,6 +42,9 @@ export default function Ckeditor() {
         className="title"
         onChange={Titlehandler}
       ></textarea>
+      <div className="selectbox">
+        <Selectbox />
+      </div>
       <CKEditor
         className="editor"
         editor={Editor}
@@ -43,9 +52,9 @@ export default function Ckeditor() {
           setData(editor.getData());
         }}
       />
-      <Link className="submit" to="/blog" onClick={Submithandler}>
+      <a className="submit" href="/blog" onClick={Submithandler}>
         작성
-      </Link>
+      </a>
     </div>
   );
 }

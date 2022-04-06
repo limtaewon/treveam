@@ -38,7 +38,10 @@ router.get("/blog/list/:key", async (req, res) => {
 
 // 글 목록 불러오기
 router.get("/blog/list", async (req, res) => {
-  const blog = await Blog.find().populate("author");
+  const blog = await Blog.find().populate("author").populate({
+    path: "area",
+    populate: "farea",
+  });
   res.send(blog);
 });
 

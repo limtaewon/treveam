@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import MainPage from "./component/main-page";
 import BlogPage from "./component/blog-page/blog-page";
 import WritePage from "./component/write-page/write-page";
+import Article from "./component/blog-page/article";
 import GNB from "./component/GNB/GNB";
 import { Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -37,6 +38,9 @@ function App() {
             <WritePage />
           </Route>
         </Switch>
+        <Route exact path="/blog/:userid/:blogid">
+          <Article />
+        </Route>
       </div>
       <div id="footer"></div>
     </>

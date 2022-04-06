@@ -521,7 +521,7 @@ footer {
   .title {
     resize: none;
     text-align: start;
-    border: 0.5px solid #d4d4d4;
+    border: none;
     padding: 10px 10px;
     margin-bottom: 10px;
     font-size: 22px;
@@ -538,5 +538,13 @@ footer {
     border-color: #d4d4d4;
     color: #222;
     border: 1px solid #d4d4d4;
+    text-decoration: none;
   }
+}
+.selectbox {
+  min-width: 590px;
+  width: 100%;
+  display: flex;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 20px;
 }

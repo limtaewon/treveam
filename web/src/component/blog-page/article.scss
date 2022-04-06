@@ -1,0 +1,41 @@
+.article-page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  .article-info {
+    width: 1100px;
+    min-width: 590px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    .article-title-info {
+      width: 1100px;
+      min-width: 590px;
+      height: 150px;
+      margin-bottom: 60px;
+      background-image: url("../../../public/images/thumbnale/태원.png");
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+        height: 60%;
+      }
+      .info {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        padding: 10px 15px 0 0;
+      }
+    }
+    .ck-content {
+      padding: 20px 30px;
+      p {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

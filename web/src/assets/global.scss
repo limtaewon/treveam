@@ -10,9 +10,6 @@ body {
   font-size: 15px;
   line-height: 1.5em;
 }
-ul {
-  margin-bottom: 0;
-}
 #body {
   width: 100%;
   min-width: 590px;
@@ -30,6 +27,8 @@ a {
   cursor: pointer;
 }
 
-ul {
+ul,
+li {
   list-style: none;
+  margin-bottom: 0;
 }
